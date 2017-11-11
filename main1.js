@@ -2,8 +2,10 @@
 
 
 var i, len, outputValue, newNumber, result, indexvalue, inpValue;
+//defining variables
       
-  function startFunc() {
+  //defining a start function
+function startFunc() {
   for (i = 0; i <= len; i++) {
 
   initialNum = document.getElementById("demo2");
@@ -16,6 +18,7 @@ var i, len, outputValue, newNumber, result, indexvalue, inpValue;
   }
 }
 
+//defining a reset function
 function resetFunc() {
   if(i == null || len == null) {
     alert('There is nothing to reset!');
@@ -24,13 +27,13 @@ function resetFunc() {
   }
 }
 
-
+//defining fingerToe 
 function fingerToe() {
       for (i = 0, len = document.getElementById("inpValue").value; i <= len; i++) {
       (function(indexvalue) { 
        setTimeout(function() {
         
-		outputValue = "";
+	outputValue = "";
         newNumber = document.createElement("BR");
         result =  document.getElementById("demo2");
 
@@ -43,7 +46,7 @@ function fingerToe() {
           console.log(indexvalue);
 
         result.insertBefore(newNumber, indexvalue[i]);
-        result.innerHTML += outputValue || indexvalue;}, i * 500);
+        result.innerHTML += outputValue || indexvalue;}, i * 500);//defining time lapse
 		 	
       })(i);
   }
